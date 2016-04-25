@@ -8,6 +8,14 @@
  */
 
 // Apply the java plugin to add support for Java
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'com.netflix.nebula:nebula-release-plugin:4.0.1'
+    }
+}
+apply plugin: 'nebula.nebula-release'
+
 apply plugin: 'java'
 
 // In this section you declare where to find the dependencies of your project
@@ -28,3 +36,4 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
 }
+
